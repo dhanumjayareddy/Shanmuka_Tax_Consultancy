@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#123A6F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E5AA8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#grad1)"/>
+  
+  <!-- Tax Consultant Illustration -->
+  <g transform="translate(300, 100)">
+    <!-- Person 1 - Consultant -->
+    <circle cx="100" cy="80" r="25" fill="#FDB462" stroke="#123A6F" stroke-width="2"/>
+    <path d="M 75 110 Q 100 100 125 110 L 125 160 L 75 160 Z" fill="#1E5AA8" stroke="#123A6F" stroke-width="2"/>
+    <rect x="85" y="120" width="30" height="40" rx="3" fill="white" stroke="#123A6F" stroke-width="1"/>
+    <text x="100" y="145" font-family="Arial" font-size="8" text-anchor="middle" fill="#123A6F">TAX</text>
+    
+    <!-- Person 2 - Client -->
+    <circle cx="200" cy="80" r="25" fill="#B3DE69" stroke="#123A6F" stroke-width="2"/>
+    <path d="M 175 110 Q 200 100 225 110 L 225 160 L 175 160 Z" fill="#80B1D3" stroke="#123A6F" stroke-width="2"/>
+    
+    <!-- Table -->
+    <rect x="120" y="150" width="80" height="60" rx="4" fill="#8DD3C7" stroke="#123A6F" stroke-width="2"/>
+    <rect x="130" y="160" width="60" height="5" rx="2" fill="#123A6F"/>
+    <rect x="130" y="170" width="40" height="5" rx="2" fill="#123A6F"/>
+    <rect x="130" y="180" width="50" height="5" rx="2" fill="#123A6F"/>
+    
+    <!-- Document icons -->
+    <rect x="140" y="190" width="15" height="20" rx="2" fill="white" stroke="#123A6F" stroke-width="1"/>
+    <rect x="165" y="190" width="15" height="20" rx="2" fill="white" stroke="#123A6F" stroke-width="1"/>
+  </g>
+  
+  <!-- Floating Elements -->
+  <circle cx="150" cy="80" r="40" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="650" cy="320" r="35" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="100" cy="300" r="25" fill="rgba(255,255,255,0.08)"/>
+  
+  <!-- Text Overlay -->
+  <text x="400" y="350" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">Expert Tax Consultation</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#123A6F">
+  <circle cx="50" cy="40" r="25" fill="#123A6F" opacity="0.1"/>
+  <text x="50" y="35" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#123A6F">₹</text>
+  <text x="50" y="50" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#123A6F">TAX</text>
+  <rect x="30" y="65" width="40" height="20" rx="4" fill="#123A6F" opacity="0.1"/>
+  <text x="50" y="78" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#123A6F">INCOME</text>
+</svg>

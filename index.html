@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanmuka Tax Consultancy | GST, Income Tax, TDS & Company Registration Services</title>
+    <meta name="description" content="Professional tax & compliance solutions in India. GST filing, income tax returns, TDS, MSME registration, company registration, and accounting services.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #123A6F;
+            --accent: #1E5AA8;
+            --bg-light: #F5F7FA;
+            --bg-main: #FAFBFC;
+            --bg-section: #F8F9FB;
+            --text-dark: #1F2933;
+            --text-light: #FFFFFF;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--bg-main);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--text-light);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links .cta-button {
+            color: var(--text-light) !important;
+        }
+
+        .cta-button {
+            background: var(--primary);
+            color: var(--text-light);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--bg-section) 0%, #E8EEF5 100%);
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #4B5563;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Trust Indicators */
+        .trust-indicators {
+            padding: 3rem 0;
+            background: var(--bg-section);
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .trust-card {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .trust-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .trust-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4rem 0;
+            background: var(--bg-main);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--text-light);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        .service-card:nth-child(1)::before {
+            background: linear-gradient(90deg, #FF6B6B, #FF8E53);
+        }
+
+        .service-card:nth-child(2)::before {
+            background: linear-gradient(90deg, #4ECDC4, #44A08D);
+        }
+
+        .service-card:nth-child(3)::before {
+            background: linear-gradient(90deg, #45B7D1, #2196F3);
+        }
+
+        .service-card:nth-child(4)::before {
+            background: linear-gradient(90deg, #96CEB4, #88D8B0);
+        }
+
+        .service-card:nth-child(5)::before {
+            background: linear-gradient(90deg, #FFEAA7, #FDCB6E);
+        }
+
+        .service-card:nth-child(6)::before {
+            background: linear-gradient(90deg, #DDA0DD, #DA70D6);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .service-icon img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .learn-more {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .learn-more:hover {
+            color: var(--primary);
+        }
+
+        /* Why Choose Us */
+        .why-choose {
+            padding: 4rem 0;
+            background: var(--bg-section);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            border-radius: 8px;
+            background: var(--bg-main);
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .feature-icon img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 4rem 0;
+            background: var(--bg-main);
+        }
+
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: var(--text-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 4rem 0;
+            background: var(--bg-section);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: var(--bg-main);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 0;
+            background: var(--bg-main);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-form {
+            background: var(--text-light);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #E5E7EB;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .contact-info {
+            padding: 2rem;
+        }
+
+        .contact-item {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .whatsapp-button {
+            background: #25D366;
+            color: var(--text-light);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+
+        /* Map Section */
+        .map-section {
+            padding: 2rem 0;
+            background: var(--bg-section);
+        }
+
+        .map-container {
+            height: 400px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--text-light);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #E5E7EB;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-timeline {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .features-grid,
+            .testimonials-grid,
+            .trust-grid,
+            .process-timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero-image img {
+                height: 300px;
+            }
+            
+            .trust-grid {
+                gap: 1rem;
+            }
+            
+            .trust-card {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.75rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .cta-button {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .contact-container {
+                gap: 2rem;
+            }
+            
+            .process-timeline {
+                gap: 1.5rem;
+            }
+            
+            .trust-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.5rem;
+                line-height: 1.3;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .service-card,
+            .feature-card,
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+            
+            .hero-image img {
+                height: 250px;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Mobile Navigation */
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            background: var(--text-light);
+            box-shadow: var(--shadow);
+            display: none;
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 1rem 0;
+        }
+
+        .mobile-menu li {
+            padding: 0.75rem 2rem;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .mobile-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        /* Sticky CTA for Mobile */
+        .mobile-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: none;
+        }
+
+        .mobile-cta button {
+            background: var(--primary);
+            color: var(--text-light);
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            box-shadow: var(--shadow-hover);
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-cta {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">Shanmuka Tax Consultancy</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why-us">Why Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact" class="cta-button">Book Consultation</a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home" onclick="toggleMobileMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMobileMenu()">About</a></li>
+            <li><a href="#services" onclick="toggleMobileMenu()">Services</a></li>
+            <li><a href="#why-us" onclick="toggleMobileMenu()">Why Us</a></li>
+            <li><a href="#contact" onclick="toggleMobileMenu()">Contact</a></li>
+            <li><a href="#contact" onclick="toggleMobileMenu()">Book Consultation</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>Professional Tax & Compliance Solutions You Can Trust</h1>
+                    <p>Expert GST filing, income tax returns, TDS, and company registration services for businesses and individuals across India.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="cta-button">Book Consultation</a>
+                        <a href="tel:8885553148" class="cta-button" style="background: var(--accent);">Call Now</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/hero.jpg" alt="Professional Tax Consultant with Client">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-indicators">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon">✓</div>
+                    <h3>On-Time Filing</h3>
+                    <p>Never miss a deadline with our timely filing services</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">✓</div>
+                    <h3>Transparent Pricing</h3>
+                    <p>No hidden charges, clear and affordable rates</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">✓</div>
+                    <h3>Expert Guidance</h3>
+                    <p>Experienced professionals for all your tax needs</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">✓</div>
+                    <h3>100% Compliance Support</h3>
+                    <p>Complete compliance with all tax regulations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Shanmuka Tax Consultancy</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem;">
+                <div>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                        Shanmuka Tax Consultancy is a leading tax and compliance service provider in India, dedicated to helping businesses and individuals navigate the complex world of taxation with ease and confidence.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8;">
+                        Our team of experienced professionals is committed to delivering accurate, timely, and cost-effective solutions tailored to your specific needs.
+                    </p>
+                </div>
+                <div>
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">Our Mission</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8;">
+                        To provide comprehensive tax and compliance services that ensure our clients' complete peace of mind while maximizing their tax efficiency and maintaining full regulatory compliance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="assets/images/gst-icon.svg" alt="GST Filing">
+                    </div>
+                    <h3>GST Filing & Compliance</h3>
+                    <p>Monthly, quarterly, and annual GST returns with complete compliance support</p>
+                    <a href="#contact" class="learn-more">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="assets/images/income-tax-icon.svg" alt="Income Tax">
+                    </div>
+                    <h3>Income Tax Filing</h3>
+                    <p>Professional ITR filing for individuals and businesses with maximum tax benefits</p>
+                    <a href="#contact" class="learn-more">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="assets/images/tds-icon.svg" alt="TDS Returns">
+                    </div>
+                    <h3>TDS Returns</h3>
+                    <p>Timely TDS deduction, filing, and certificate generation services</p>
+                    <a href="#contact" class="learn-more">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="assets/images/msme-icon.svg" alt="MSME Registration">
+                    </div>
+                    <h3>MSME Registration</h3>
+                    <p>Quick and hassle-free MSME/Udyog Aadhaar registration for businesses</p>
+                    <a href="#contact" class="learn-more">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="assets/images/accounting-icon.svg" alt="Accounting">
+                    </div>
+                    <h3>Accounting & Bookkeeping</h3>
+                    <p>Comprehensive accounting solutions for accurate financial management</p>
+                    <a href="#contact" class="learn-more">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="assets/images/company-icon.svg" alt="Company Registration">
+                    </div>
+                    <h3>Company Registration</h3>
+                    <p>Pvt Ltd, LLP, and OPC registration with complete documentation support</p>
+                    <a href="#contact" class="learn-more">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose" id="why-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose Shanmuka Tax Consultancy?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Specialized Expertise</h3>
+                    <p>Deep knowledge of Indian tax laws and regulations with years of practical experience</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Quick Turnaround</h3>
+                    <p>Fast processing and filing to ensure you never miss important deadlines</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>100% Accuracy</h3>
+                    <p>Precise calculations and thorough review to eliminate errors and penalties</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Personalized Support</h3>
+                    <p>One-on-one consultation and dedicated support for all your queries</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Data Security</h3>
+                    <p>Complete confidentiality and secure handling of your financial information</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Growth Focused</h3>
+                    <p>Strategic tax planning to help your business grow and save more</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <h2 class="section-title">Our Simple Process</h2>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Consultation</h3>
+                    <p>Understanding your requirements and providing initial guidance</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Documentation</h3>
+                    <p>Collecting and organizing all necessary documents and information</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Filing & Compliance</h3>
+                    <p>Expert preparation and filing of all required returns and forms</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Ongoing Support</h3>
+                    <p>Continuous assistance and updates on your compliance status</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Shanmuka Tax Consultancy has been handling our GST filing for the past 3 years. Their service is exceptional and always on time. Highly recommended!"
+                    </div>
+                    <div class="testimonial-author">- Rajesh Kumar, Business Owner</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Professional, reliable, and affordable. They helped me save significantly on my income tax returns. The team is very knowledgeable and supportive."
+                    </div>
+                    <div class="testimonial-author">- Priya Sharma, IT Professional</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Company registration was made so simple with their guidance. They handled everything from documentation to final registration. Excellent service!"
+                    </div>
+                    <div class="testimonial-author">- Amit Verma, Startup Founder</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <h3>Book Your Consultation</h3>
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Required *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a Service</option>
+                                <option value="gst">GST Filing & Compliance</option>
+                                <option value="income-tax">Income Tax Filing</option>
+                                <option value="tds">TDS Returns</option>
+                                <option value="msme">MSME Registration</option>
+                                <option value="accounting">Accounting & Bookkeeping</option>
+                                <option value="company-registration">Company Registration</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button" style="width: 100%;">Submit Request</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <h3>📞 Phone Numbers</h3>
+                        <p><a href="tel:8885553148" style="color: var(--primary); text-decoration: none;">88855 53148</a></p>
+                        <p><a href="tel:7842080388" style="color: var(--primary); text-decoration: none;">78420 80388</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📧 Email</h3>
+                        <p><a href="mailto:sivakotireddy507@gmail.com" style="color: var(--primary); text-decoration: none;">sivakotireddy507@gmail.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📍 Address</h3>
+                        <p>Near KBR Complex (Back Side),<br>Raghavendra Digitals Building, Narasaraopet,palnadu Dist,522601.</p>
+                    </div>
+                    <a href="https://wa.me/918885553148" target="_blank" class="whatsapp-button">
+                        💬 Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4059282578285!2d78.46665631487858!3d17.38514078804767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78692d482a!2sKBR%20Complex!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Shanmuka Tax Consultancy</h3>
+                    <p>Your trusted partner for all tax and compliance needs in India.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#why-us">Why Choose Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#services">GST Filing</a></li>
+                        <li><a href="#services">Income Tax</a></li>
+                        <li><a href="#services">TDS Returns</a></li>
+                        <li><a href="#services">Company Registration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📞 88855 53148, 78420 80388</p>
+                    <p>📧 sivakotireddy507@gmail.com</p>
+                    <p>📍 Near KBR Complex, Raghavendra Digitals Building</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Shanmuka Tax Consultancy. All rights reserved. | <a href="#privacy" style="color: var(--text-light);">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-cta">
+        <button onclick="window.location.href='#contact'">Book Consultation</button>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // Form Validation and Submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            // Basic validation
+            const name = formData.get('name');
+            const phone = formData.get('phone');
+            const email = formData.get('email');
+            const service = formData.get('service');
+            
+            if (!name || !phone || !email || !service) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Phone validation
+            const phoneRegex = /^[6-9]\d{9}$/;
+            if (!phoneRegex.test(phone.replace(/\s/g, ''))) {
+                alert('Please enter a valid 10-digit phone number.');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Show success message
+            alert('Thank you for your inquiry! We will contact you shortly.');
+            form.reset();
+            
+            // In a real implementation, you would send this data to your server
+            console.log('Form submitted:', Object.fromEntries(formData));
+        }
+
+        // Smooth scroll behavior for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+            } else {
+                nav.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all service cards and feature cards
+        document.querySelectorAll('.service-card, .feature-card, .trust-card, .testimonial-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
